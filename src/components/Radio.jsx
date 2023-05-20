@@ -8,7 +8,7 @@ import { useGLTF, PositionalAudio } from "@react-three/drei";
 export default function Model(props) {
   const [ready, setReady] = useState(false);
 
-	const { nodes, materials } = useGLTF("/radio2.glb");
+	const { nodes, materials } = useGLTF("/aperture-radio/radio2.glb");
 	return (
 		<group
 			{...props}
@@ -93,7 +93,7 @@ export default function Model(props) {
 			<group>
 				{ready && (
 					<PositionalAudio
-						url="/Still alive Radio.mp3"
+						url="/aperture-radio/Still alive Radio.mp3"
 						autoplay
 						distance={3}
 						loop
@@ -104,4 +104,4 @@ export default function Model(props) {
 	);
 }
 
-useGLTF.preload("/radio2.glb");
+useGLTF.preload("/aperture-radio/radio2.glb");
